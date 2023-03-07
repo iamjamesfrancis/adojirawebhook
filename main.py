@@ -12,4 +12,5 @@ class Item(BaseModel):
 @app.post("/work-item")
 async def work_item(item:Union[dict, None]):
     logger.logger.info(item)
+    open("test.txt", "+a",).write(str(item))
     return item
